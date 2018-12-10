@@ -3,16 +3,22 @@ module.exports = {
   ** Headers of the page
   */
   head: {
-    title: 'songeagle',
+    title: "Powered by songEagle",
     meta: [
       { charset: 'utf-8' },
+      { name: 'author', content: 'saucxs@163.com' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: 'a personal blog base nuxtjs vue project' }
+      { hid: 'keywords', name: 'keywords', content: 'songEagle, 程新松, saucxs, Vue, Nuxt, Node, 前端开发, JavaScript' },
+      { hid: 'description', name: 'description', content: '基于Vue.js和Node.js开发的前端博客' }
     ],
-    link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
-    ]
+    link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
+    script: [{ src: 'http://at.alicdn.com/t/font_461741_4nduxuexsi3sor.js' }]
   },
+  // Global CSS
+  css: [
+    { src: '~assets/sass/app.scss', lang: 'sass' },
+    { src: 'highlight.js/styles/atelier-cave-light.css' }
+  ],
   /*
   ** Customize the progress bar color
   */
@@ -24,16 +30,25 @@ module.exports = {
     /*
     ** Run ESLint on save
     */
-    extend (config, { isDev, isClient }) {
-      if (isDev && isClient) {
+    extend(config, ctx) {
+      if (ctx.dev && ctx.isClient) {
         config.module.rules.push({
           enforce: 'pre',
           test: /\.(js|vue)$/,
           loader: 'eslint-loader',
           exclude: /(node_modules)/
-        })
+        });
       }
-    }
-  }
-}
-
+    },
+    vendor: ['axios']
+  },
+  babel: {
+    presets: ['es2015', 'stage-2'],
+    plugins: ['transform-async-to-generator', 'transform-runtime'],
+    comments: true
+  },
+  /*
+  ** plugins
+  */
+  plugins: [{ src: '~plugins/axios.js' }]
+};

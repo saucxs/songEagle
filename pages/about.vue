@@ -5,9 +5,9 @@
         <use xlink:href="#icon-about"></use>
       </svg>关于
     </h2>
-    <p class="small-screen-indent">😄 曾使用JS + HTML5 + CSS3 + Node.js + Express.js + Mongodb开发过一个博客网站，也部署了一段时间😄</p>
+    <p class="small-screen-indent">😄 曾使用Hexo + GitHub Pages搭建了新的博客😄</p>
     <p class="indent-1 small-screen-indent">😭 但因为当时初学，最后效果并不是很满意😭</p>
-    <p class="indent-2 small-screen-indent">😅 后使用Hexo + GitHub Pages搭建了新的博客😅</p>
+    <p class="indent-2 small-screen-indent">😅 后使用Thinkjs + nodejs + ES5/6 + mysql开发过sau交流学习社区，部署上线，<a href="https://www.mwcxs.top" target="_blank">线上</a>😅</p>
     <p class="indent-3 small-screen-indent">🙁 虽有很多好处，但个性化不足，以及存在的一些限制。依旧不是很满意🙁</p>
     <p class="indent-4 small-screen-indent">😜 遂决定重新开发自己的博客😜</p>
     <p class="indent-4 small-screen-indent">😀 使用Vue.js + Nuxt.js + ES6/7 + Node.js + Koa.js + mySql开发了此博客，代码已在GitHub上开源😀</p>
@@ -41,7 +41,7 @@ import qs from 'qs';
 export default {
   head () {
     return {
-      title: '关于 - Powered by saucxs'
+      title: '关于 - Powered by songEagle'
     };
   },
   created () {
