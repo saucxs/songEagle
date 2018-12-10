@@ -8,7 +8,7 @@ module.exports = {
       { charset: 'utf-8' },
       { name: 'author', content: 'saucxs@163.com' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'keywords', name: 'keywords', content: 'songEagle, 程新松, saucxs, Vue, Nuxt, Node, 前端开发, JavaScript' },
+      { hid: 'keywords', name: 'keywords', content: '程新松, songEagle, saucxs, Vue, Nuxt, Node, 前端开发, JavaScript' },
       { hid: 'description', name: 'description', content: '基于Vue.js和Node.js开发的前端博客' }
     ],
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
@@ -52,3 +52,4 @@ module.exports = {
   */
   plugins: [{ src: '~plugins/axios.js' }]
 };
+
