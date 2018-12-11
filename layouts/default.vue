@@ -12,7 +12,7 @@
       <div class="container">
         <span class="to-top" @click="goToTop" v-show="isShowToTop">
           <svg class="icon" aria-hidden="true">
-            <use xlink:href="#icon-toTop"></use>
+            <use xlink:href="#icon-ico-to-top"></use>
           </svg>
         </span>
       </div>
