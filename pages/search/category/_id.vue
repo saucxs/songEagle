@@ -2,7 +2,7 @@
   <section class="category">
     <p class="title">
       <svg class="icon" aria-hidden="true">
-        <use xlink:href="#icon-cat"></use>
+        <use xlink:href="#icon-fenlei"></use>
       </svg>{{ categoryName }}
     </p>
     <post-list v-for="post in postList" :post="post" :key="post.id"></post-list>
@@ -19,7 +19,7 @@ import qs from 'qs';
 export default {
   head () {
     return {
-      title: `${this.categoryName} - Powered by Don`
+      title: `${this.categoryName} - Powered by songEagle`
     };
   },
   data () {
@@ -79,10 +79,10 @@ export default {
     }
   },
   created () {
-    axios.post('/track/addEventTrack', qs.stringify({
-      key: 'VIEW_POST_BY_CATEGORY',
-      id: this.categoryId
-    }));
+    // axios.post('/track/addEventTrack', qs.stringify({
+    //   key: 'VIEW_POST_BY_CATEGORY',
+    //   id: this.categoryId
+    // }));
   }
 };
 </script>

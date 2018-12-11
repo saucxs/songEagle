@@ -46,8 +46,8 @@ import Hlj from 'highlight.js';
 import axios from 'axios';
 import moment from 'moment';
 import marked from 'marked';
-import Comment from '~/components/Comment';
 import qs from 'qs';
+import Comment from '~/components/Comment';
 
 export default {
   components: {
@@ -55,7 +55,7 @@ export default {
   },
   head () {
     return {
-      title: `${this.post.title} - Powered by Don`
+      title: `${this.post.title} - Powered by songEagle`
     };
   },
   validate ({ params }) {
@@ -94,10 +94,10 @@ export default {
     });
     this.markdownContent = marked(this.post.content, { sanitize: true });
 
-    axios.post('/track/addEventTrack', qs.stringify({
-      key: 'VIEW_POST',
-      id: this.postId
-    }));
+    // axios.post('/track/addEventTrack', qs.stringify({
+    //   key: 'VIEW_POST',
+    //   id: this.postId
+    // }));
   },
   filters: {
     formatTime (time) {
@@ -188,7 +188,7 @@ export default {
         }
       }
     }
-    
+
     .icon {
       width: 0.9em;
       height: 0.9em;

@@ -2,7 +2,7 @@
   <section class="keyword">
     <p class="title">
       <svg class="icon" aria-hidden="true">
-        <use xlink:href="#icon-search"></use>
+        <use xlink:href="#icon-cx"></use>
       </svg><span>{{ keyword }}</span> 的搜索结果
     </p>
     <post-list v-for="post in postList" :post="post" :key="post.id"></post-list>
@@ -19,7 +19,7 @@ import qs from 'qs';
 export default {
   head () {
     return {
-      title: `${this.keyword} - Powered by Don`
+      title: `${this.keyword} - Powered by songEagle`
     };
   },
   data () {
@@ -74,10 +74,10 @@ export default {
     }
   },
   created () {
-    axios.post('/track/addEventTrack', qs.stringify({
-      key: 'VIEW_POST_BY_KEYWORD',
-      keyword: this.keyword
-    }));
+    // axios.post('/track/addEventTrack', qs.stringify({
+    //   key: 'VIEW_POST_BY_KEYWORD',
+    //   keyword: this.keyword
+    // }));
   }
 };
 </script>

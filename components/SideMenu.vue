@@ -12,17 +12,17 @@
         </nuxt-link>
         <nuxt-link to="/archive" class="no-underline">
           <svg class="icon" aria-hidden="true">
-            <use xlink:href="#icon-archive"></use>
+            <use xlink:href="#icon-guidang"></use>
           </svg>ARCHIVE
         </nuxt-link>
         <nuxt-link to="/laboratory" class="no-underline">
           <svg class="icon" aria-hidden="true">
-            <use xlink:href="#icon-lab"></use>
+            <use xlink:href="#icon-ilaboratory"></use>
           </svg>LABORATORY
         </nuxt-link>
         <nuxt-link to="/about" class="no-underline">
           <svg class="icon" aria-hidden="true">
-            <use xlink:href="#icon-about"></use>
+            <use xlink:href="#icon-guanyuwomenicon2"></use>
           </svg>ABOUT
         </nuxt-link>
         <a href="https://github.com/XNAL" target="_blank" class="no-underline">
@@ -32,13 +32,18 @@
         </a>
         <a href="https://segmentfault.com/u/tdon" target="_blank" class="no-underline">
           <svg class="icon" aria-hidden="true">
-            <use xlink:href="#icon-sf"></use>
+            <use xlink:href="#icon-iconsf"></use>
           </svg>SEGMENTFAULT
         </a>
         <a href="https://juejin.im/user/59b9f345f265da066464180c" target="_blank" class="no-underline juejin">
           <svg class="icon" aria-hidden="true">
-            <use xlink:href="#icon-juejin"></use>
+            <use xlink:href="#icon-juejin1"></use>
           </svg>JUEJIN
+        </a>
+        <a href="https://www.mwcxs.top" target="_blank" class="no-underline juejin" @click="goToOtherWebsite('JUEJIN')">
+          <svg class="icon" aria-hidden="true">
+            <use xlink:href="#icon-cloud"></use>
+          </svg>sau交流学习社区
         </a>
       </nav>
     </section>

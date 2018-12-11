@@ -2,7 +2,7 @@
   <section class="archive">
     <p class="archive-title">
       <svg class="icon" aria-hidden="true">
-        <use xlink:href="#icon-archive"></use>
+        <use xlink:href="#icon-guidang"></use>
       </svg>归档
     </p>
     <div class="archive-com-sec archive-cat">
@@ -45,7 +45,7 @@ import qs from 'qs';
 export default {
   head () {
     return {
-      title: '归档 - Powered by saucxs'
+      title: '归档 - Powered by songEagle'
     };
   },
   asyncData () {
@@ -65,9 +65,9 @@ export default {
     TimeLine
   },
   created () {
-    axios.post('/track/addEventTrack', qs.stringify({
-      key: 'VIEW_ARCHIVE'
-    }));
+    // axios.post('/track/addEventTrack', qs.stringify({
+    //   key: 'VIEW_ARCHIVE'
+    // }));
   }
 };
 </script>

@@ -14,7 +14,7 @@
   export default {
     head () {
       return {
-        title: 'SongEagle\'s Blog - Stay curious. Stay humble.'
+        title: 'SongEagle - Stay curious. Stay humble.'
       };
     },
     data () {
@@ -47,9 +47,9 @@
       LoadMore
     },
     created () {
-      axios.post('/track/addEventTrack', qs.stringify({
-        key: 'VIEW_INDEX'
-      }));
+      // axios.post('/track/addEventTrack', qs.stringify({
+      //   key: 'VIEW_INDEX'
+      // }));
     },
     methods: {
       loadMore: function () {

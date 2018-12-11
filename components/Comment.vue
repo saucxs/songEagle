@@ -160,7 +160,8 @@ export default {
     },
     // github授权登录
     githubLogin: function () {
-      window.location.href = 'https://github.com/login/oauth/authorize?client_id=6625cb27769b1bc52415&redirect_uri=http://localhost:3000/login&scope=user:email';
+      // window.location.href = 'https://github.com/login/oauth/authorize?client_id=99de45bc093be602452a&redirect_uri=http://localhost:3000/login&scope=user:email';
+      window.location.href = 'https://github.com/login/oauth/authorize?client_id=99de45bc093be602452a&scope=user:email';
       window.localStorage.setItem('GITHUB_LOGIN_REDIRECT_URL', `${this.$route.path}?comment=new`);
     },
     // 回复评论
@@ -358,7 +359,7 @@ export default {
           font-size: 1em;
           color: #9a9a9a;
         }
-        
+
         .comment-item-reply-content {
           padding: 0.5em 0;
           line-height: 1.5;
@@ -382,7 +383,7 @@ export default {
           font-size: 1em;
           color: #9a9a9a;
         }
-        
+
         .comment-item-content {
           padding: 0.5em 0;
           line-height: 1.5;

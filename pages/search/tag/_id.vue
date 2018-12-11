@@ -19,7 +19,7 @@ import qs from 'qs';
 export default {
   head () {
     return {
-      title: `${this.tagName} - Powered by Don`
+      title: `${this.tagName} - Powered by songEagle`
     };
   },
   data () {
@@ -79,10 +79,10 @@ export default {
     }
   },
   created () {
-    axios.post('/track/addEventTrack', qs.stringify({
-      key: 'VIEW_POST_BY_TAG',
-      id: this.tagId
-    }));
+    // axios.post('/track/addEventTrack', qs.stringify({
+    //   key: 'VIEW_POST_BY_TAG',
+    //   id: this.tagId
+    // }));
   }
 };
 </script>
