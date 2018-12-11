@@ -36,7 +36,6 @@ module.exports = {
         });
       }
     },
-    vendor: ['axios']
   },
   babel: {
     presets: ['es2015', 'stage-2'],
@@ -46,6 +45,6 @@ module.exports = {
   /*
   ** plugins
   */
-  plugins: [{ src: '~plugins/axios.js' }]
+  // plugins: [{ src: '~plugins/axios.js' }]
 }
 
