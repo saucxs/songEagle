@@ -4,11 +4,11 @@
       <section class="header-container container">
         <span class="side-menu-icon">
           <svg class="icon" aria-hidden="true" @click="isShowSideMenu = true">
-            <use xlink:href="#icon-menu"></use>
+            <use xlink:href="#icon-deng"></use>
           </svg>
         </span>
         <nuxt-link to="/" class="logo-info no-underline">
-          <img class="logo" src="/logo.png" alt="logo">
+          <img class="logo" src="/logo.jpg" alt="logo">
           <h2>songEagle</h2>
         </nuxt-link>
         <span class="desc">STAY CURIOUS. STAY HUMBLE.</span>
@@ -16,7 +16,7 @@
           <input type="text" :class="{ 'show': showInput }"
                 v-model.trim="keyword" @keyup.enter="searchKeyWord" placeholder="search..." maxlength="20">
           <svg class="icon" aria-hidden="true" @click="clickSearch">
-            <use xlink:href="#icon-search"></use>
+            <use xlink:href="#icon-cx"></use>
           </svg>
         </div>
         <div :class="['small-screen-search', { 'show': showInput }]">
@@ -95,6 +95,7 @@ header {
       width: 3em;
       height: 3em;
       transition: all .3s;
+      border-radius: 50%;
       &:hover {
         transform: scale(1.2) rotate(360deg);
       }

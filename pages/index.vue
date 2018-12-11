@@ -14,7 +14,7 @@
   export default {
     head () {
       return {
-        title: 'SongEagle\'s Blog - Stay curious. Stay humble.'
+        title: 'SongEagle - Stay curious. Stay humble.'
       };
     },
     data () {

@@ -2,7 +2,7 @@
   <section class="about">
     <h2 class="title">
       <svg class="icon" aria-hidden="true">
-        <use xlink:href="#icon-about"></use>
+        <use xlink:href="#icon-guanyuwomenicon2"></use>
       </svg>关于
     </h2>
     <p class="small-screen-indent">😄 曾使用Hexo + GitHub Pages搭建了新的博客😄</p>

@@ -3,14 +3,14 @@
     <div :class="['part-one', 'part-width', `${position === 'right' ? 'right' : 'left'}`]">
       <img :src="project.poster" alt="项目图片">
     </div>
-    <div :class="['part-two', 'part-width', 'part-relative', 
+    <div :class="['part-two', 'part-width', 'part-relative',
         `${(position === 'right' ? 'right' : 'left') === 'left' ? 'right' : 'left'}`]">
       <h3 class="name">{{ project.name }}</h3>
       <p class="description">{{ project.description }}</p>
       <p class="link-address" v-if="project.link !== ''" @click="viewProject('ONLINE')">
         <a :href="project.link" class="link" target="_blank">
           <svg class="icon" aria-hidden="true">
-            <use xlink:href="#icon-web"></use>
+            <use xlink:href="#icon-view"></use>
           </svg>在线效果
         </a>
       </p>
@@ -53,7 +53,7 @@ export default {
   margin: 2em auto 4em;
   padding: 0 1em;
   min-height: 14em;
-  
+
   .part-one {
     position: relative;
     // width: 50%;
@@ -95,7 +95,7 @@ export default {
       margin: 1em auto;
       .icon {
         margin-right: 0.4em;
-        width: 0.9em;
+        width: 1.9em;
         height: 0.9em;
         vertical-align: -0.04em;
       }
@@ -108,7 +108,7 @@ export default {
       border: 1px solid #d8dce5;
       border-radius: 0.2em;
       cursor: pointer;
-      background-color: #fff;   
+      background-color: #fff;
       outline: none;
 
       &:hover {

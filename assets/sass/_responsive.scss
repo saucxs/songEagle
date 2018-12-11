@@ -52,7 +52,7 @@
     .logo-info {
       position: absolute;
       top: 0;
-      left: 50%;
+      left: 48%;
       transform: translateX(-50%);
       text-align: center;
       margin-left: 0;
@@ -72,7 +72,7 @@
   .menu {
     display: none;
   }
-  
+
   .main-container {
     margin-left: 0;
   }
@@ -101,7 +101,7 @@
       position: relative;
       top: 0;
       transform: translate(0, 0);
-      
+
       &.left {
         left: 0;
       }
