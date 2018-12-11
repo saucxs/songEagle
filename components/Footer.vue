@@ -5,6 +5,34 @@
   </footer>
 </template>
 
+<script>
+  import axios from 'axios';
+  export default {
+    asyncData () {
+      return axios.get(`/admin/getSystem`).then(res => {
+        if (res.data.success === 1) {
+          console.log(res.data, '9999999')
+        } else {
+
+        }
+      });
+    },
+    data () {
+      return {
+        keyword: '',
+        showInput: false,
+        isShowSideMenu: false
+      };
+    },
+
+    methods: {
+      getSystem(){
+
+      }
+    }
+  };
+</script>
+
 <style lang="scss" scoped>
 footer {
   padding: 0.5em 0;

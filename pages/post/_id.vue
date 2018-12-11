@@ -37,7 +37,7 @@
         </nuxt-link>
       </p>
     </div>
-    <comment :postId="postId"></comment>
+    <!--<comment :postId="postId"></comment>-->
    </section>
 </template>
 
@@ -47,12 +47,12 @@ import axios from 'axios';
 import moment from 'moment';
 import marked from 'marked';
 import qs from 'qs';
-import Comment from '~/components/Comment';
+//import Comment from '~/components/Comment';
 
 export default {
-  components: {
-    Comment
-  },
+//  components: {
+//    Comment
+//  },
   head () {
     return {
       title: `${this.post.title} - Powered by songEagle`
