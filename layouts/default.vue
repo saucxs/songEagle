@@ -1,53 +1,122 @@
 <template>
-  <div>
-    <nuxt/>
+  <div class="main">
+    <don-header/>
+    <div class="container">
+      <don-menu/>
+      <div class="main-container">
+        <nuxt/>
+      </div>
+    </div>
+    <don-footer/>
+    <div class="top-bar">
+      <div class="container">
+        <span class="to-top" @click="goToTop" v-show="isShowToTop">
+          <svg class="icon" aria-hidden="true">
+            <use xlink:href="#icon-toTop"></use>
+          </svg>
+        </span>
+      </div>
+    </div>
   </div>
 </template>
 
-<style>
-html {
-  font-family: "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-  font-size: 16px;
-  word-spacing: 1px;
-  -ms-text-size-adjust: 100%;
-  -webkit-text-size-adjust: 100%;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-font-smoothing: antialiased;
-  box-sizing: border-box;
-}
+<script>
+  import Header from '~/components/Header.vue';
+  import Menu from '~/components/Menu.vue';
+  import Footer from '~/components/Footer.vue';
 
-*, *:before, *:after {
-  box-sizing: border-box;
-  margin: 0;
-}
+  export default {
+    components: {
+      'don-header': Header,
+      'don-menu': Menu,
+      'don-footer': Footer
+    },
+    data () {
+      return {
+        $docElement: null,
+        $body: null,
+        isShowToTop: false,
+        timer: null
+      };
+    },
+    mounted: function () {
+      this.$docElement = document.documentElement;
+      this.$body = document.body;
+      this.pageToTop();
+      window.addEventListener('scroll', this.debounce(this.pageToTop));
+    },
+    methods: {
+      pageToTop: function () {
+        let scrollTop = this.$body.scrollTop + this.$docElement.scrollTop;
+        if (scrollTop > 200) {
+          this.isShowToTop = true;
+        } else {
+          this.isShowToTop = false;
+        }
+        if (scrollTop === 0) {
+          clearInterval(this.timer);
+        }
+      },
+      goToTop: function () {
+        this.timer = setInterval(() => {
+          let scrollTop = this.$body.scrollTop + this.$docElement.scrollTop;
+          let speed = Math.floor(scrollTop / 6);
+          this.$body.scrollTop = this.$docElement.scrollTop = scrollTop - (speed < 1 ? 1 : speed);
+        }, 30);
+      },
+      debounce: function (fn, delay, timeout) {
+        var timer = null;
+        var last = new Date().getTime();
+        delay = delay || 300;
+        timeout = timeout || 300;
+        return () => {
+          if (timer) {
+            clearTimeout(timer);
+          }
+          timer = setTimeout(fn, delay);
+          if (new Date().getTime() > last + timeout) {
+            fn.apply(this, [].slice.call(Array, arguments));
+            last = new Date().getTime();
+            clearTimeout(timer);
+          }
+        };
+      }
+    }
+  };
+</script>
 
-.button--green {
-  display: inline-block;
-  border-radius: 4px;
-  border: 1px solid #3b8070;
-  color: #3b8070;
-  text-decoration: none;
-  padding: 10px 30px;
-}
+<style lang="scss">
+  @import "~assets/sass/app";
+  .main {
+    position: relative;
+    box-sizing: border-box;
 
-.button--green:hover {
-  color: #fff;
-  background-color: #3b8070;
-}
+  .main-container {
+    position: relative;
+    margin-top: 5.2em;
+  // margin-left: 15em;
+    min-height: $minHeight;
+  }
+  .top-bar {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 10em;
+  }
+  .to-top {
+    position: absolute;
+    z-index: 99999;
+    bottom: 0;
+    right: -7em;
+    cursor: pointer;
 
-.button--grey {
-  display: inline-block;
-  border-radius: 4px;
-  border: 1px solid #35495e;
-  color: #35495e;
-  text-decoration: none;
-  padding: 10px 30px;
-  margin-left: 15px;
-}
-
-.button--grey:hover {
-  color: #fff;
-  background-color: #35495e;
-}
+  .icon {
+    width: 3em;
+    height: 3em;
+  }
+  &:hover {
+     color: $base-color;
+   }
+  }
+  }
 </style>
-

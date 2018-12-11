@@ -3,7 +3,7 @@ module.exports = {
   ** Headers of the page
   */
   head: {
-    title: 'power by songEagle',
+    title: "Powered by songEagle",
     meta: [
       { charset: 'utf-8' },
       { name: 'author', content: 'saucxs@163.com' },
@@ -11,10 +11,14 @@ module.exports = {
       { hid: 'keywords', name: 'keywords', content: '程新松, songEagle, saucxs, Vue, Nuxt, Node, 前端开发, JavaScript' },
       { hid: 'description', name: 'description', content: '基于Vue.js和Node.js开发的前端博客' }
     ],
-    link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
-    ]
+    link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
+    script: [{ src: 'http://at.alicdn.com/t/font_461741_4nduxuexsi3sor.js' }]
   },
+  // Global CSS
+  css: [
+    { src: '~assets/sass/app.scss', lang: 'sass' },
+    { src: 'highlight.js/styles/atelier-cave-light.css' }
+  ],
   /*
   ** Customize the progress bar color
   */
@@ -36,6 +40,7 @@ module.exports = {
         });
       }
     },
+    vendor: ['axios']
   },
   babel: {
     presets: ['es2015', 'stage-2'],
@@ -45,6 +50,6 @@ module.exports = {
   /*
   ** plugins
   */
-  // plugins: [{ src: '~plugins/axios.js' }]
-}
+  plugins: [{ src: '~plugins/axios.js' }]
+};
 
