@@ -45,9 +45,9 @@ export default {
     };
   },
   created () {
-    axios.post('/track/addEventTrack', qs.stringify({
-      key: 'VIEW_ABOUT'
-    }));
+    // axios.post('/track/addEventTrack', qs.stringify({
+    //   key: 'VIEW_ABOUT'
+    // }));
   }
 };
 </script>

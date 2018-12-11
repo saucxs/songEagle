@@ -65,9 +65,9 @@ export default {
     TimeLine
   },
   created () {
-    axios.post('/track/addEventTrack', qs.stringify({
-      key: 'VIEW_ARCHIVE'
-    }));
+    // axios.post('/track/addEventTrack', qs.stringify({
+    //   key: 'VIEW_ARCHIVE'
+    // }));
   }
 };
 </script>

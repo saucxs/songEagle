@@ -36,10 +36,10 @@ export default {
   },
   methods: {
     viewProject (type) {
-      axios.post('/track/addEventTrack', qs.stringify({
-        key: `VIEW_PROJECT_${type}`,
-        id: this.project.id
-      }));
+      // axios.post('/track/addEventTrack', qs.stringify({
+      //   key: `VIEW_PROJECT_${type}`,
+      //   id: this.project.id
+      // }));
     }
   }
 };

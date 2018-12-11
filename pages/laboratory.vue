@@ -41,9 +41,9 @@ export default {
     'project-list': Project
   },
   created () {
-    axios.post('/track/addEventTrack', qs.stringify({
-      key: 'VIEW_LABORATORY'
-    }));
+    // axios.post('/track/addEventTrack', qs.stringify({
+    //   key: 'VIEW_LABORATORY'
+    // }));
   }
 };
 </script>
