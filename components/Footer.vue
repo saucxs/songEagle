@@ -2,6 +2,9 @@
   <footer>
 		<p>版权所有 © 2018 - songEagle</p>
 		<p>Powered by Node.js & Vue.js & Nuxt.js</p>
+    <p>
+      {{bottomData}}
+    </p>
   </footer>
 </template>
 
@@ -10,10 +13,13 @@
   export default {
     asyncData () {
       return axios.get(`/admin/getSystem`).then(res => {
+        console.log(res.data, '-=-=-=-=-=-=-=-=-==-=-=-=-=-=')
         if (res.data.success === 1) {
-          console.log(res.data, '9999999')
+          return {
+            bottomData: res.data.content
+          };
         } else {
-
+          return { bottomData: {} };
         }
       });
     },

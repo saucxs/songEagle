@@ -119,7 +119,6 @@ export default {
       let token = localStorage.getItem('GITHUB_LOGIN_TOKEN');
       let userInfo = localStorage.getItem('GITHUB_LOGIN_GUEST');
       userInfo = JSON.parse(userInfo);
-      console.log(userInfo, '121212121212121212121212121212122121212121212')
       this.newComment.userName = userInfo.userName;
       this.newComment.avatar = userInfo.avatar;
       axios.post('/post/addComment', qs.stringify({
@@ -136,13 +135,11 @@ export default {
               avatar: this.guestAvatar,
               number: res.data.number
             }));
-            console.log(this.comments, '0909090909090909090909090909009090909090909')
             this.newComment = Object.assign(this.newComment, {
               id: 0,
               content: '',
               replyId: '0'
             });
-            console.log(this.newComment, '-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-==-=-=-')
             this.replyComment = Object.assign({}, {
               replyUserName: '',
               replyContent: '',

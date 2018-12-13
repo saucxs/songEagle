@@ -15,7 +15,6 @@ export default {
     };
   },
   mounted () {
-    console.log(this.$route.query.code, '=================')
     axios.get(`/oauth/github/github_oauth?code=${this.$route.query.code}`).then(res => {
       if (res.data.success === 1) {
         let guest = {
