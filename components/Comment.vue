@@ -36,7 +36,7 @@
               <div class="comment-item-content">
                 {{ comment.content }}
 
-                <div class="comment-item-reply" v-if="comment.replyId">
+                <div class="comment-item-reply" v-if="comment.replyId !== '0'">
                   <p class="comment-item-reply-user">{{ comment.replyUserName }}</p>
                   <div class="comment-item-reply-content">{{ comment.replyContent }}</div>
                   <div class="comment-item-reply-time">{{ comment.replyTime  | formatTime }}</div>
@@ -71,7 +71,7 @@ export default {
     return {
       newComment: {
         postId: 0,
-        replyId: 0,
+        replyId: '0',
         content: ''
       },
       replyComment: {
@@ -117,6 +117,11 @@ export default {
         return;
       }
       let token = localStorage.getItem('GITHUB_LOGIN_TOKEN');
+      let userInfo = localStorage.getItem('GITHUB_LOGIN_GUEST');
+      userInfo = JSON.parse(userInfo);
+      console.log(userInfo, '121212121212121212121212121212122121212121212')
+      this.newComment.userName = userInfo.userName;
+      this.newComment.avatar = userInfo.avatar;
       axios.post('/post/addComment', qs.stringify({
         comment: this.newComment,
         token: 'Bearer ' + token
@@ -131,11 +136,13 @@ export default {
               avatar: this.guestAvatar,
               number: res.data.number
             }));
+            console.log(this.comments, '0909090909090909090909090909009090909090909')
             this.newComment = Object.assign(this.newComment, {
               id: 0,
               content: '',
-              replyId: 0
+              replyId: '0'
             });
+            console.log(this.newComment, '-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-==-=-=-')
             this.replyComment = Object.assign({}, {
               replyUserName: '',
               replyContent: '',
