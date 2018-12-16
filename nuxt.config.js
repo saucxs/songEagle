@@ -6,7 +6,7 @@ module.exports = {
     title: "Powered by songEagle",
     meta: [
       { charset: 'utf-8' },
-      { name: 'author', content: 'saucxs@163.com' },
+      { name: 'author', content: '程新松, songEagle, saucxs' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       { hid: 'keywords', name: 'keywords', content: '程新松, songEagle, saucxs, Vue, Nuxt, Node, 前端开发, JavaScript' },
       { hid: 'description', name: 'description', content: '基于Vue.js和Node.js开发的前端博客' }
@@ -47,6 +47,7 @@ module.exports = {
     plugins: ['transform-async-to-generator', 'transform-runtime'],
     comments: true
   },
+
   /*
   ** plugins
   */
