@@ -18,17 +18,17 @@
     <div class="contact">
       <span class="qrcode wx">
         <svg class="icon" aria-hidden="true">
-          <use xlink:href="#icon-weixin"></use>
+          <use xlink:href="#icon-shiliangzhinengduixiang"></use>
         </svg>
       </span>
       <span class="qrcode qq">
         <svg class="icon" aria-hidden="true">
-          <use xlink:href="#icon-qq"></use>
+          <use xlink:href="#icon-QQ"></use>
         </svg>
       </span>
       <a href="mailto:saucxs@163.com" class="no-underline" title="saucxs@163.com">
         <svg class="icon" aria-hidden="true">
-          <use xlink:href="#icon-email"></use>
+          <use xlink:href="#icon-Email"></use>
         </svg>
       </a>
     </div>
