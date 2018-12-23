@@ -4,6 +4,9 @@ songEagle是自己一个小窝，自己写文章的小窝。文章内容不限�
 ## 技术栈
 nuxtjs + vuejs + koajs + websocket + redis + mysql
 
+## 源码
+https://github.com/saucxs/songEagle
+
 ### 目录结构
 + .nuxt    —— bulid编译后文件夹，nuxt使用服务端渲染
 + assets    ——资源文件
@@ -39,28 +42,54 @@ nuxtjs + vuejs + koajs + websocket + redis + mysql
     
 ### 截图
 1、home主页
+
 ![image](./screenshot/home.png)
 
 2、archive归档
+
 ![image](./screenshot/archive.png)
 
 3、laboratory实验室
+
 ![image](./screenshot/laboratory.png)
 
 4、about关于
+
 ![image](./screenshot/about.png)
 
 5、search搜索
+
 ![image](./screenshot/search.png)
 
 6、comment评论
+
 ![image](./screenshot/comment.png)
 
 7、无线端
+
 ![image](./screenshot/phone.png)
 
 ### 运行
 ```
-git clone 
+git clone https://github.com/saucxs/songEagle
+
+npm i
+
+//本地运行
+npm run dev
+
+//部署
+npm run build
+npm start
 
 ```
+
+### 适配
+
+webkit内核的浏览器
+
+无线端
+
+### 最后
+
+欢迎fork和start一波
