@@ -4,7 +4,7 @@
       <section class="header-container container">
         <span class="side-menu-icon">
           <svg class="icon" aria-hidden="true" @click="isShowSideMenu = true">
-            <use xlink:href="#icon-deng"></use>
+            <use xlink:href="#icon-dengpao"></use>
           </svg>
         </span>
         <nuxt-link to="/" class="logo-info no-underline">
@@ -16,7 +16,7 @@
           <input type="text" :class="{ 'show': showInput }"
                 v-model.trim="keyword" @keyup.enter="searchKeyWord" placeholder="search..." maxlength="20">
           <svg class="icon" aria-hidden="true" @click="clickSearch">
-            <use xlink:href="#icon-cx"></use>
+            <use xlink:href="#icon-chaxun"></use>
           </svg>
         </div>
         <div :class="['small-screen-search', { 'show': showInput }]">
@@ -69,10 +69,10 @@ export default {
 <style lang="scss" scoped>
 @import "~assets/sass/app";
 header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
+  /*position: fixed;*/
+  /*top: 0;*/
+  /*left: 0;*/
+  /*right: 0;*/
   height: 4.2em;
   line-height: 4.2em;
   background-color: rgba(255, 255, 255, 0.9);
@@ -91,7 +91,7 @@ header {
     }
     .logo {
       float: left;
-      margin: 0.6em 1em 0 0;
+      margin: 0.5em 0.5em 0 0;
       width: 3em;
       height: 3em;
       transition: all .3s;
@@ -102,9 +102,9 @@ header {
     }
     h2 {
       float: left;
-      font-size: 2.2em;
+      font-size: 2em;
       text-align: left;
-      font-weight: 500;
+      font-weight: 700;
     }
     .desc {
       float: left;

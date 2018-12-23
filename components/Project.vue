@@ -7,20 +7,21 @@
         `${(position === 'right' ? 'right' : 'left') === 'left' ? 'right' : 'left'}`]">
       <h3 class="name">{{ project.name }}</h3>
       <p class="description">{{ project.description }}</p>
-      <p class="link-address" v-if="project.link !== ''" @click="viewProject('ONLINE')">
-        <a :href="project.link" class="link" target="_blank">
+      <p class="link-address">
+        <a v-if="project.link !== ''" :href="project.link" class="link"  @click="viewProject('ONLINE')" target="_blank">
           <svg class="icon" aria-hidden="true">
             <use xlink:href="#icon-view"></use>
           </svg>在线效果
         </a>
-      </p>
-      <p class="link-address" v-if="project.github">
-        <a :href="project.github" class="github" target="_blank" @click="viewProject('GITHUB')">
+        <a v-if="project.github" :href="project.github" class="github" target="_blank" @click="viewProject('GITHUB')">
           <svg class="icon" aria-hidden="true">
             <use xlink:href="#icon-github"></use>
           </svg>GitHub查看
         </a>
       </p>
+      <!--<p class="link-address" >-->
+       <!---->
+      <!--</p>-->
     </div>
   </section>
 </template>
@@ -52,7 +53,7 @@ export default {
   overflow: hidden;
   margin: 2em auto 4em;
   padding: 0 1em;
-  min-height: 14em;
+  min-height: 16em;
 
   .part-one {
     position: relative;
@@ -95,7 +96,7 @@ export default {
       margin: 1em auto;
       .icon {
         margin-right: 0.4em;
-        width: 1.9em;
+        width: 0.9em;
         height: 0.9em;
         vertical-align: -0.04em;
       }
@@ -110,6 +111,7 @@ export default {
       cursor: pointer;
       background-color: #fff;
       outline: none;
+      margin: 0em 1em;
 
       &:hover {
         color: $base-color;

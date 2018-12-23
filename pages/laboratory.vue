@@ -2,7 +2,7 @@
   <section class="laboratory">
     <h2 class="title">
       <svg class="icon" aria-hidden="true">
-        <use xlink:href="#icon-ilaboratory"></use>
+        <use xlink:href="#icon-laboratory"></use>
       </svg>实验室
     </h2>
     <div class="proj-list">
@@ -30,7 +30,10 @@ export default {
     return axios.get(`/post/getLaboratory`).then(res => {
       if (res.data.success === 1) {
         return {
-          projectList: res.data.posts
+          projectList: res.data.posts.map(item => {
+            item.poster = 'http://admin.chengxinsong.cn' + item.poster
+            return item;
+          })
         };
       } else {
         return { projectList: [] };

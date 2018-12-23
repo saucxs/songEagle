@@ -4,7 +4,7 @@
     <div class="metas">
       <nuxt-link :to="`/category/${post.categoryId}`" class="cat-link">
         <svg class="icon" aria-hidden="true">
-          <use xlink:href="#icon-cat"></use>
+          <use xlink:href="#icon-category"></use>
         </svg>{{ post.categoryName }}
       </nuxt-link>
       <span class="time">

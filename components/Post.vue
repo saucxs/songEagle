@@ -4,7 +4,7 @@
       <p class="time">发布于 {{ post.createTime | formatTime }}</p>
       <nuxt-link class="cat-link" :to="`/search/category/${post.categoryId}`">
         <svg class="icon" aria-hidden="true">
-          <use xlink:href="#icon-fenlei"></use>
+          <use xlink:href="#icon-category"></use>
         </svg>{{ post.categoryName }}
       </nuxt-link>
     </div>
@@ -14,7 +14,7 @@
     <div class="small-screen-meta">
       <nuxt-link :to="`/category/${post.categoryId}`" class="cat-link">
         <svg class="icon" aria-hidden="true">
-          <use xlink:href="#icon-fenlei"></use>
+          <use xlink:href="#icon-category"></use>
         </svg>{{ post.categoryName }}
       </nuxt-link>
       <span class="time">
@@ -27,7 +27,7 @@
     <p class="more">
       <nuxt-link :to="`/post/${post.id}`">
         MORE<svg class="icon" aria-hidden="true">
-          <use xlink:href="#icon-iconmore"></use>
+          <use xlink:href="#icon-acmore"></use>
         </svg>
       </nuxt-link>
     </p>

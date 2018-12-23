@@ -2,7 +2,7 @@
   <section class="about">
     <h2 class="title">
       <svg class="icon" aria-hidden="true">
-        <use xlink:href="#icon-guanyuwomenicon2"></use>
+        <use xlink:href="#icon-icnavabout"></use>
       </svg>关于
     </h2>
     <p class="small-screen-indent">😄 曾使用Hexo + GitHub Pages搭建了新的博客😄</p>
@@ -18,17 +18,17 @@
     <div class="contact">
       <span class="qrcode wx">
         <svg class="icon" aria-hidden="true">
-          <use xlink:href="#icon-shiliangzhinengduixiang"></use>
+          <use xlink:href="#icon-weixin"></use>
         </svg>
       </span>
       <span class="qrcode qq">
         <svg class="icon" aria-hidden="true">
-          <use xlink:href="#icon-QQ"></use>
+          <use xlink:href="#icon-qq"></use>
         </svg>
       </span>
       <a href="mailto:saucxs@163.com" class="no-underline" title="saucxs@163.com">
         <svg class="icon" aria-hidden="true">
-          <use xlink:href="#icon-Email"></use>
+          <use xlink:href="#icon-Email_Asset"></use>
         </svg>
       </a>
     </div>
@@ -128,11 +128,11 @@ export default {
     }
     .wx::after {
       left: -7.5em;
-      background-image: url(/weixin.png);
+      background-image: url(/wechat.jpg);
     }
     .qq::after {
       left: -8em;
-      background-image: url(/qq.png);
+      background-image: url(/qq.jpg);
     }
   }
 }

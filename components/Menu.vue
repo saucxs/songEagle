@@ -12,18 +12,38 @@
     </nuxt-link>
     <nuxt-link to="/laboratory" class="no-underline">
       <svg class="icon" aria-hidden="true">
-        <use xlink:href="#icon-ilaboratory"></use>
+        <use xlink:href="#icon-laboratory"></use>
       </svg>LABORATORY
     </nuxt-link>
     <nuxt-link to="/about" class="no-underline">
       <svg class="icon" aria-hidden="true">
-        <use xlink:href="#icon-guanyuwomenicon2"></use>
+        <use xlink:href="#icon-icnavabout"></use>
       </svg>ABOUT
     </nuxt-link>
     <a href="https://github.com/saucxs" target="_blank" class="no-underline" @click="goToOtherWebsite('GITHUB')">
       <svg class="icon" aria-hidden="true">
         <use xlink:href="#icon-github"></use>
       </svg>GITHUB
+    </a>
+    <a href="https://www.mwcxs.top" target="_blank" class="no-underline juejin" @click="goToOtherWebsite('SAU')">
+      <svg class="icon" aria-hidden="true">
+        <use xlink:href="#icon-cloud"></use>
+      </svg>sau交流学习社区
+    </a>
+    <a href="http://weekly.mwcxs.top" target="_blank" class="no-underline juejin" @click="goToOtherWebsite('WEEKLY')">
+      <svg class="icon" aria-hidden="true">
+        <use xlink:href="#icon-menu-weekly-select"></use>
+      </svg>weekly周报
+    </a>
+    <a href="http://www.cnblogs.com/chengxs" target="_blank" class="no-underline" @click="goToOtherWebsite('CNBLOG')">
+      <svg class="icon" aria-hidden="true">
+        <use xlink:href="#icon-cnblogs"></use>
+      </svg>博客园
+    </a>
+    <a href="https://blog.csdn.net/saucxs" target="_blank" class="no-underline" @click="goToOtherWebsite('CSDN')">
+      <svg class="icon" aria-hidden="true">
+        <use xlink:href="#icon-CSDNboke"></use>
+      </svg>CSDN
     </a>
     <a href="https://segmentfault.com/u/saucxs" target="_blank" class="no-underline" @click="goToOtherWebsite('SEGMENTFAULT')">
       <svg class="icon" aria-hidden="true">
@@ -32,13 +52,8 @@
     </a>
     <a href="https://juejin.im/user/5b71a02b6fb9a00986736195" target="_blank" class="no-underline juejin" @click="goToOtherWebsite('JUEJIN')">
       <svg class="icon" aria-hidden="true">
-        <use xlink:href="#icon-juejin1"></use>
+        <use xlink:href="#icon-juejin"></use>
       </svg>JUEJIN
-    </a>
-    <a href="https://www.mwcxs.top" target="_blank" class="no-underline juejin" @click="goToOtherWebsite('JUEJIN')">
-      <svg class="icon" aria-hidden="true">
-        <use xlink:href="#icon-cloud"></use>
-      </svg>sau交流学习社区
     </a>
   </nav>
 </template>
@@ -60,8 +75,10 @@ export default {
 <style lang="scss" scoped>
 @import "~assets/sass/app";
 .menu {
-  position: fixed;
-  top: 5.2em;
+  /*position: fixed;*/
+  margin-top: 1em;
+  margin-right: 1em;
+
   a {
     display: block;
     margin-bottom: 0.8em;

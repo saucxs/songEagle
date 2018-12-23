@@ -8,7 +8,7 @@
     <div class="archive-com-sec archive-cat">
       <p class="sort-title">
         <svg class="icon" aria-hidden="true">
-          <use xlink:href="#icon-cat"></use>
+          <use xlink:href="#icon-category"></use>
         </svg>类别
       </p>
       <div class="sort-items">

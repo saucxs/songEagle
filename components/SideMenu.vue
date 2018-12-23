@@ -2,7 +2,8 @@
   <div class="mask" @click="$emit('hide-menu')" v-if="isShow">
     <section class="side-menu" v-if="isShow">
       <div class="don-info">
-        <img src="/logo.png" alt="logo">
+        <img src="/logo.jpg" alt="logo">
+        <h2>songEagle</h2>
       </div>
       <nav class="menu-list">
         <nuxt-link to="/" class="no-underline">
@@ -17,33 +18,48 @@
         </nuxt-link>
         <nuxt-link to="/laboratory" class="no-underline">
           <svg class="icon" aria-hidden="true">
-            <use xlink:href="#icon-ilaboratory"></use>
+            <use xlink:href="#icon-laboratory"></use>
           </svg>LABORATORY
         </nuxt-link>
         <nuxt-link to="/about" class="no-underline">
           <svg class="icon" aria-hidden="true">
-            <use xlink:href="#icon-guanyuwomenicon2"></use>
+            <use xlink:href="#icon-icnavabout"></use>
           </svg>ABOUT
         </nuxt-link>
-        <a href="https://github.com/XNAL" target="_blank" class="no-underline">
+        <a href="https://github.com/saucxs" target="_blank" class="no-underline" @click="goToOtherWebsite('GITHUB')">
           <svg class="icon" aria-hidden="true">
             <use xlink:href="#icon-github"></use>
           </svg>GITHUB
         </a>
-        <a href="https://segmentfault.com/u/tdon" target="_blank" class="no-underline">
+        <a href="https://www.mwcxs.top" target="_blank" class="no-underline juejin" @click="goToOtherWebsite('SAU')">
+          <svg class="icon" aria-hidden="true">
+            <use xlink:href="#icon-cloud"></use>
+          </svg>sau交流学习社区
+        </a>
+        <a href="http://weekly.mwcxs.top" target="_blank" class="no-underline juejin" @click="goToOtherWebsite('WEEKLY')">
+          <svg class="icon" aria-hidden="true">
+            <use xlink:href="#icon-menu-weekly-select"></use>
+          </svg>weekly周报
+        </a>
+        <a href="http://www.cnblogs.com/chengxs" target="_blank" class="no-underline" @click="goToOtherWebsite('CNBLOG')">
+          <svg class="icon" aria-hidden="true">
+            <use xlink:href="#icon-cnblogs"></use>
+          </svg>博客园
+        </a>
+        <a href="https://blog.csdn.net/saucxs" target="_blank" class="no-underline" @click="goToOtherWebsite('CSDN')">
+          <svg class="icon" aria-hidden="true">
+            <use xlink:href="#icon-CSDNboke"></use>
+          </svg>CSDN
+        </a>
+        <a href="https://segmentfault.com/u/saucxs" target="_blank" class="no-underline" @click="goToOtherWebsite('SEGMENTFAULT')">
           <svg class="icon" aria-hidden="true">
             <use xlink:href="#icon-iconsf"></use>
           </svg>SEGMENTFAULT
         </a>
-        <a href="https://juejin.im/user/59b9f345f265da066464180c" target="_blank" class="no-underline juejin">
+        <a href="https://juejin.im/user/5b71a02b6fb9a00986736195" target="_blank" class="no-underline juejin" @click="goToOtherWebsite('JUEJIN')">
           <svg class="icon" aria-hidden="true">
-            <use xlink:href="#icon-juejin1"></use>
+            <use xlink:href="#icon-juejin"></use>
           </svg>JUEJIN
-        </a>
-        <a href="https://www.mwcxs.top" target="_blank" class="no-underline juejin" @click="goToOtherWebsite('JUEJIN')">
-          <svg class="icon" aria-hidden="true">
-            <use xlink:href="#icon-cloud"></use>
-          </svg>sau交流学习社区
         </a>
       </nav>
     </section>
@@ -86,8 +102,12 @@ export default {
     height: 5em;
     border-bottom: 1px solid rgba(238, 238, 238, 0.6);
     text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     img {
-      margin-top: 1em;
+      border-radius: 50%;
+      margin-right: 1em;
       width: 3em;
       height: 3em;
     }

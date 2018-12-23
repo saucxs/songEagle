@@ -1,7 +1,7 @@
 <template>
   <div class="main">
     <don-header/>
-    <div class="container">
+    <div class="container box-flex">
       <don-menu/>
       <div class="main-container">
         <nuxt/>
@@ -12,7 +12,7 @@
       <div class="container">
         <span class="to-top" @click="goToTop" v-show="isShowToTop">
           <svg class="icon" aria-hidden="true">
-            <use xlink:href="#icon-ico-to-top"></use>
+            <use xlink:href="#icon-backtotop"></use>
           </svg>
         </span>
       </div>
@@ -86,14 +86,21 @@
 
 <style lang="scss">
   @import "~assets/sass/app";
+  .box-flex{
+    /*margin-top: 4.2em;*/
+    display: flex;
+  }
+
   .main {
     position: relative;
     box-sizing: border-box;
 
   .main-container {
     position: relative;
-    margin-top: 5.2em;
-  // margin-left: 15em;
+    margin-top: 1em;
+    margin-left: 0em;
+    width: 100%;
+  /* margin-left: 15em;*/
     min-height: $minHeight;
   }
   .top-bar {
