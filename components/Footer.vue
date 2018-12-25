@@ -14,6 +14,18 @@
         isShowSideMenu: false
       };
     },
+    asyncData () {
+      return axios.get(`/post/getSystem`).then(res => {
+        if (res.data.success === 1) {
+          console.log(res, '----------------------------')
+          return {
+            systemConfig: res.data,
+          };
+        } else {
+          return { systemConfig: {} };
+        }
+      });
+    },
     methods: {
 
     }
@@ -22,6 +34,7 @@
 
 <style lang="scss" scoped>
 footer {
+  margin: 1.5em 0;
   padding: 0.5em 0;
   text-align: center;
   background: #000;

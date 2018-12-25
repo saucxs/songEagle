@@ -89,10 +89,8 @@ export default {
     z-index: 9998;
 }
 .side-menu {
-  position: fixed;
-  top: 0;
-  left: 0;
-  bottom: 0;
+  height: 100%;
+  overflow: auto;
   width: 60%;
   max-width: 20em;
   background: #fff;

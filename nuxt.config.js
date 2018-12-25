@@ -13,8 +13,7 @@ module.exports = {
     ],
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
     script: [
-      { src: '//at.alicdn.com/t/font_979136_0fivjmxz0h4.js' },
-      { src: '~assets/js/baidu.js'}
+      { src: '//at.alicdn.com/t/font_979136_0fivjmxz0h4.js' }
       ]
   },
   // Global CSS
@@ -59,6 +58,8 @@ module.exports = {
   /*
   ** plugins
   */
-  plugins: [{ src: '~plugins/axios.js' }]
+  plugins: [
+    { src: '~plugins/axios.js' }
+    ]
 };
 

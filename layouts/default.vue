@@ -87,20 +87,21 @@
 <style lang="scss">
   @import "~assets/sass/app";
   .box-flex{
-    /*margin-top: 4.2em;*/
+    height: calc(100% - 10.2em);
     display: flex;
   }
 
   .main {
     position: relative;
     box-sizing: border-box;
+    height: 100%;
 
   .main-container {
     position: relative;
     margin-top: 1em;
     margin-left: 0em;
     width: 100%;
-  /* margin-left: 15em;*/
+    overflow: auto;
     min-height: $minHeight;
   }
   .top-bar {

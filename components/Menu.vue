@@ -75,7 +75,7 @@ export default {
 <style lang="scss" scoped>
 @import "~assets/sass/app";
 .menu {
-  /*position: fixed;*/
+  overflow: auto;
   margin-top: 1em;
   margin-right: 1em;
 
