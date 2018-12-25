@@ -3,7 +3,7 @@
     <don-header/>
     <div class="container box-flex">
       <don-menu/>
-      <div class="main-container">
+      <div class="main-container" id="main-box">
         <nuxt/>
       </div>
     </div>
@@ -30,6 +30,18 @@
       'don-menu': Menu,
       'don-footer': Footer
     },
+    asyncData () {
+      return axios.get(`/post/getSystem`).then(res => {
+        if (res.data.success === 1) {
+          console.log(res, '----------------------------')
+          return {
+            systemConfig: res.data,
+          };
+        } else {
+          return { systemConfig: {} };
+        }
+      });
+    },
     data () {
       return {
         $docElement: null,
@@ -39,10 +51,10 @@
       };
     },
     mounted: function () {
-      this.$docElement = document.documentElement;
-      this.$body = document.body;
+      this.$docElement = document.getElementById('main-box')
+      this.$body = document.getElementById('index-box');
       this.pageToTop();
-      window.addEventListener('scroll', this.debounce(this.pageToTop));
+      document.getElementById('main-box').addEventListener('scroll', this.debounce(this.pageToTop));
     },
     methods: {
       pageToTop: function () {
@@ -87,7 +99,7 @@
 <style lang="scss">
   @import "~assets/sass/app";
   .box-flex{
-    height: calc(100% - 10.2em);
+    height: calc(100% - 10em);
     display: flex;
   }
 
@@ -114,7 +126,7 @@
     position: absolute;
     z-index: 99999;
     bottom: 0;
-    right: -7em;
+    right: 1em;
     cursor: pointer;
 
   .icon {

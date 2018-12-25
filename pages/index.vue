@@ -1,5 +1,5 @@
 <template>
-  <section class="index">
+  <section class="index" id="index-box">
     <post-list v-for="post in postList" :post="post" :key="post.id"></post-list>
     <load-more :is-no-more="isNoMore" :is-show-loading="isShowLoading" @load-more="loadMore"></load-more>
   </section>

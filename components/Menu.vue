@@ -20,37 +20,37 @@
         <use xlink:href="#icon-icnavabout"></use>
       </svg>ABOUT
     </nuxt-link>
-    <a href="https://github.com/saucxs" target="_blank" class="no-underline" @click="goToOtherWebsite('GITHUB')">
+    <a href="https://github.com/saucxs" target="_blank" class="no-underline">
       <svg class="icon" aria-hidden="true">
         <use xlink:href="#icon-github"></use>
       </svg>GITHUB
     </a>
-    <a href="https://www.mwcxs.top" target="_blank" class="no-underline juejin" @click="goToOtherWebsite('SAU')">
+    <a href="https://www.mwcxs.top" target="_blank" class="no-underline juejin">
       <svg class="icon" aria-hidden="true">
         <use xlink:href="#icon-cloud"></use>
       </svg>sau交流学习社区
     </a>
-    <a href="http://weekly.mwcxs.top" target="_blank" class="no-underline juejin" @click="goToOtherWebsite('WEEKLY')">
+    <a href="http://weekly.mwcxs.top" target="_blank" class="no-underline juejin">
       <svg class="icon" aria-hidden="true">
         <use xlink:href="#icon-menu-weekly-select"></use>
       </svg>weekly周报
     </a>
-    <a href="http://www.cnblogs.com/chengxs" target="_blank" class="no-underline" @click="goToOtherWebsite('CNBLOG')">
+    <a href="http://www.cnblogs.com/chengxs" target="_blank" class="no-underline">
       <svg class="icon" aria-hidden="true">
         <use xlink:href="#icon-cnblogs"></use>
       </svg>博客园
     </a>
-    <a href="https://blog.csdn.net/saucxs" target="_blank" class="no-underline" @click="goToOtherWebsite('CSDN')">
+    <a href="https://blog.csdn.net/saucxs" target="_blank" class="no-underline">
       <svg class="icon" aria-hidden="true">
         <use xlink:href="#icon-CSDNboke"></use>
       </svg>CSDN
     </a>
-    <a href="https://segmentfault.com/u/saucxs" target="_blank" class="no-underline" @click="goToOtherWebsite('SEGMENTFAULT')">
+    <a href="https://segmentfault.com/u/saucxs" target="_blank" class="no-underline">
       <svg class="icon" aria-hidden="true">
         <use xlink:href="#icon-iconsf"></use>
       </svg>SEGMENTFAULT
     </a>
-    <a href="https://juejin.im/user/5b71a02b6fb9a00986736195" target="_blank" class="no-underline juejin" @click="goToOtherWebsite('JUEJIN')">
+    <a href="https://juejin.im/user/5b71a02b6fb9a00986736195" target="_blank" class="no-underline juejin">
       <svg class="icon" aria-hidden="true">
         <use xlink:href="#icon-juejin"></use>
       </svg>JUEJIN
@@ -63,11 +63,11 @@ import axios from 'axios';
 import qs from 'qs';
 export default {
   methods: {
-    goToOtherWebsite (type) {
-      axios.post('/track/addEventTrack', qs.stringify({
-        key: `GO_TO_${type}`
-      }));
-    }
+    // goToOtherWebsite (type) {
+    //   axios.post('/track/addEventTrack', qs.stringify({
+    //     key: `GO_TO_${type}`
+    //   }));
+    // }
   }
 };
 </script>

@@ -14,18 +14,7 @@
         isShowSideMenu: false
       };
     },
-    asyncData () {
-      return axios.get(`/post/getSystem`).then(res => {
-        if (res.data.success === 1) {
-          console.log(res, '----------------------------')
-          return {
-            systemConfig: res.data,
-          };
-        } else {
-          return { systemConfig: {} };
-        }
-      });
-    },
+
     methods: {
 
     }
