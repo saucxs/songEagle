@@ -1,5 +1,6 @@
 <template>
-  <footer>
+  <footer >
+    <p><a v-for="(item, index) in bottomLink" :key="index" :href="item.link_url" target="_blank">{{item.link_name}}</a></p>
 		<p>版权所有 © 2018 - songEagle</p>
 		<p>Powered by Node.js & Vue.js & Nuxt.js</p>
   </footer>
@@ -7,11 +8,12 @@
 
 <script>
   export default {
+    props: ["bottomLink"],
     data () {
       return {
         keyword: '',
         showInput: false,
-        isShowSideMenu: false
+        isShowSideMenu: false,
       };
     },
 
