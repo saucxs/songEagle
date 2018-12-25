@@ -7,8 +7,8 @@
         <nuxt/>
       </div>
     </div>
-    <!--{{systemConfig}}-->
-    <don-footer />
+    {{systemConfig.bottomLink}}
+    <don-footer :bottomLink="systemConfig.bottomLink"/>
     <div class="top-bar">
       <div class="container">
         <span class="to-top" @click="goToTop" v-show="isShowToTop">
@@ -36,7 +36,8 @@
       var _this = this;
       return axios.get(`/post/getSystem`).then(res => {
         if (res.data.success === 1) {
-          _this.systemConfig = res.data;
+          console.log(res.data, ']]]]]]')
+          _this.systemConfig = res.data.content;
 
         }
       });
