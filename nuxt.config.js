@@ -13,7 +13,8 @@ module.exports = {
     ],
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
     script: [
-      { src: '//at.alicdn.com/t/font_979136_0fivjmxz0h4.js' }
+      { src: '//at.alicdn.com/t/font_979136_0fivjmxz0h4.js' },
+      { src: 'https://hm.baidu.com/hm.js?7cc624a9cc153ac61e26cb47cb5e3785' }
       ]
   },
   // Global CSS
@@ -59,7 +60,8 @@ module.exports = {
   ** plugins
   */
   plugins: [
-    { src: '~plugins/axios.js' }
+    { src: '~plugins/axios.js' },
+    { src: '~plugins/baiduGa.js' }
     ]
 };
 

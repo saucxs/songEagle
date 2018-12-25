@@ -7,8 +7,7 @@
         <nuxt/>
       </div>
     </div>
-    {{systemConfig.bottomLink}}
-    <don-footer :bottomLink="systemConfig.bottomLink"/>
+    <don-footer :bottomData="systemData"/>
     <div class="top-bar">
       <div class="container">
         <span class="to-top" @click="goToTop" v-show="isShowToTop">
@@ -36,9 +35,7 @@
       var _this = this;
       return axios.get(`/post/getSystem`).then(res => {
         if (res.data.success === 1) {
-          console.log(res.data, ']]]]]]')
-          _this.systemConfig = res.data.content;
-
+          _this.systemData = res.data.content;
         }
       });
     },
@@ -48,7 +45,7 @@
         $body: null,
         isShowToTop: false,
         timer: null,
-        systemConfig: ''
+        systemData: ''
       };
     },
     mounted: function () {
@@ -100,7 +97,7 @@
 <style lang="scss">
   @import "~assets/sass/app";
   .box-flex{
-    height: calc(100% - 10em);
+    height: calc(100% - 14em);
     display: flex;
   }
 
