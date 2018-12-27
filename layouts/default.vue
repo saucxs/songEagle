@@ -7,7 +7,7 @@
         <nuxt/>
       </div>
     </div>
-    <don-footer :bottomData="systemData"/>
+    <don-footer/>
     <div class="top-bar">
       <div class="container">
         <span class="to-top" @click="goToTop" v-show="isShowToTop">
@@ -21,7 +21,6 @@
 </template>
 
 <script>
-  import axios from 'axios';
   import Header from '~/components/Header.vue';
   import Menu from '~/components/Menu.vue';
   import Footer from '~/components/Footer.vue';
@@ -31,21 +30,12 @@
       'don-menu': Menu,
       'don-footer': Footer
     },
-    created () {
-      var _this = this;
-      return axios.get(`/post/getSystem`).then(res => {
-        if (res.data.success === 1) {
-          _this.systemData = res.data.content;
-        }
-      });
-    },
     data () {
       return {
         $docElement: null,
         $body: null,
         isShowToTop: false,
-        timer: null,
-        systemData: ''
+        timer: null
       };
     },
     mounted: function () {
