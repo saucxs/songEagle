@@ -39,13 +39,13 @@
 
 <style lang="scss" scoped>
 footer {
-  margin: 2.5em 0;
   padding: 0.5em 0;
   text-align: center;
   background: #000;
   color: #fff;
   font-size: 0.9em;
   line-height: 2;
+  height: 7em;
   letter-spacing: 0.1em;
   a {
     margin: 0px 10px;

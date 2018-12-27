@@ -87,7 +87,7 @@
 <style lang="scss">
   @import "~assets/sass/app";
   .box-flex{
-    height: calc(100% - 14em);
+    height: calc(100% - 10.2em);
     display: flex;
   }
 
