@@ -13,6 +13,7 @@
 
 <script>
   import axios from 'axios';
+  import watermark from 'watermark-dom'
   export default {
     data () {
       return {
@@ -28,11 +29,39 @@
         if (res.data.success === 1) {
           this.bottomLink = res.data.bottomLink;
           this.systemConfig = res.data.systemConfig;
+          this.init();
         }
       });
     },
     methods: {
-
+      init () {
+        var showText = this.systemConfig.watermark_txt + "\b\r" + window.location.host + "\b\r" + this.Dateformat(new Date(),"yyyy-MM-dd hh:mm:ss");
+        watermark.init({ watermark_txt: showText,watermark_width: 170, font_size: 16, watermark_height: 120, watermark_x_space: 60, watermark_y_space: 30 });
+        setInterval(function (item) {
+             var showText1 = item.watermark_txt + "\b\n" + window.location.host + "\b\n" + item.Dateformat(new Date(), "yyyy-MM-dd hh:mm:ss");
+             watermark.init({ watermark_txt: showText1, watermark_width: 170, font_size: 16, watermark_height: 120, watermark_x_space: 60, watermark_y_space: 30 });
+         }, 3000, {watermark_txt: this.systemConfig.watermark_txt, Dateformat: this.Dateformat}); //每3秒刷新一次  3000的单位是毫秒
+      },
+      Dateformat (fthis, fmt) {
+        var o = {
+          "M+": fthis.getMonth() + 1, //月份
+          "d+": fthis.getDate(), //日
+          "h+": fthis.getHours(), //小时
+          "m+": fthis.getMinutes(), //分
+          "s+": fthis.getSeconds(), //秒
+          "q+": Math.floor((fthis.getMonth() + 3) / 3), //季度
+          "S": fthis.getMilliseconds() //毫秒
+        };
+        if (/(y+)/.test(fmt)) {
+          fmt = fmt.replace(RegExp.$1, (fthis.getFullYear() + "").substr(4 - RegExp.$1.length));
+        }
+        for (var k in o) {
+          if (new RegExp("(" + k + ")").test(fmt)) {
+            fmt = fmt.replace(RegExp.$1, (RegExp.$1.length == 1) ? (o[k]) : (("00" + o[k]).substr(("" + o[k]).length)));
+          }
+        }
+        return fmt;
+      }
     }
   };
 </script>
