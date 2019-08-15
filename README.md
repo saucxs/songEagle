@@ -1,8 +1,8 @@
 # songEagle
-songEagle是自己一个小窝，自己写文章的小窝。文章内容不限于技术，可以是经验分享，项目实战，实验室，资讯，一些想法，一些感慨。
+一个支持服务端渲染SSR的博客，nuxt+vue+vuex+websocket+koa2+mysql+redis+nginx+jwt，包含文章，实验室，按照类别和标签分类，文章评论支持github第三方登录等，首页视觉可视化采用threejs+ WebGLRenderer实现网状波浪和三菱锥的动态效果。后台管理系统使用jwt做鉴权认证登录，支持markdown写文章，文章实时保存等功能。
 
 ## 技术栈
-nuxtjs + vuejs + koajs + websocket + redis + mysql
+nuxt+vue+vuex+websocket+koa2+mysql+redis+nginx+jwt
 
 ## 源码
 https://github.com/saucxs/songEagle
