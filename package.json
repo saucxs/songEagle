@@ -14,7 +14,7 @@
   },
   "dependencies": {
     "axios": "^0.18.0",
-    "highlight.js": "^9.13.1",
+    "highlight.js": "^10.1.2",
     "marked": "^0.5.2",
     "moment": "^2.22.2",
     "node-sass": "^4.11.0",
