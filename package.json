@@ -16,7 +16,7 @@
     "axios": "^0.18.0",
     "highlight.js": "^9.13.1",
     "marked": "^0.5.2",
-    "moment": "^2.22.2",
+    "moment": "^2.29.4",
     "node-sass": "^4.11.0",
     "nuxt": "^2.3.4",
     "sass-loader": "^7.1.0",
